@@ -139,7 +139,6 @@ jobs:
           ${{ env.GHCR_IMAGE_REPOSITORY }}:${{ steps.generate_tag.outputs.GIT_TAG }}
         labels: |
           org.opencontainers.image.source=${{ github.event.repository.clone_url }}
-          org.opencontainers.image.created=${{ steps.prep.outputs.created }}
           org.opencontainers.image.revision=${{ github.sha }}
 
     - name: Build Docker UBI Image
@@ -158,5 +157,4 @@ jobs:
           ${{ env.GHCR_IMAGE_REPOSITORY }}:${{ steps.generate_tag.outputs.GIT_UBI_TAG }}
         labels: |
           org.opencontainers.image.source=${{ github.event.repository.clone_url }}
-          org.opencontainers.image.created=${{ steps.prep.outputs.created }}
           org.opencontainers.image.revision=${{ github.sha }}

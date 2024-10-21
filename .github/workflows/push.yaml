@@ -1,6 +1,7 @@
 name: Push
 
 on:
+# TODO: SHOULD BE ON PUSH TO MASTER!
   pull_request:
     types:
       - closed
